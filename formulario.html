@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+   <style>
+
+        body{
+           font-family: Arial, Helvetica, sans-serif;
+           background: url(../img/info.png);
+
+        }
+
+    .box{
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        border-radius: 15px;
+        width: 20%;
+    }     
+    fieldset{
+    border: 3px solid dodgerblue;
+
+    }
+    legend{
+    border: 3px solid dodgerblue;
+    padding: 10px;
+    text-align: center;
+    background-color: dodgerblue;
+    border-radius: 8px;
+    
+    }
+    .inputbox{
+    position: relative;
+ 
+   }
+
+   .inputUser{
+   background: none;
+   border: none;
+   border-bottom: 1px solid white;
+   outline: none;
+   color: white;
+   font-size: 15px;
+   width: 100%;
+   letter-spacing: 2px;
+   }
+.labelinput{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   pointer-events: none;
+   transition: .5px;
+
+
+ }
+
+.inputUser:focus ~ .labelinput,
+.inputUser:valid ~ .labelinput{
+
+top: -20px;
+font-size: 12px;
+color: dodgerblue;
+
+}
+
+#data_nascimento{
+border: none;
+padding: 8px;
+border-radius: 10px;
+outline: none;
+font-size: 8px;
+position: fixed;
+font-family: 'Bebas Neue';
+font-style: oblique;
+
+}
+.info{
+background-image:linear-gradient(to right,rgb(0,92,197), rgb(90,20,220));
+width: 100%;
+border: none;
+padding: 15px;
+color: white;
+font-size: 15px;
+cursor: pointer;
+border-radius: 10px;
+
+}
+
+.info:hover{
+background-image:linear-gradient(to right,rgb(0,80,172), rgb(80,19,195));
+
+}
+.index{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: gold;
+    font-family: 'Crete Round', cursive;
+    font-style: italic;
+    font-size: 25px;
+    padding: 20px 50px 20px 10px;
+    
+    
+}
+
+</style>
+
+</head>
+
+<body>
+    <div class="box">
+      <form action="">
+        <fieldset>
+        <legend><b>Preencha Seu Formulário</b></legend>
+        <Br>
+        <div class="inputbox">
+        <input type="text" name="nome" id="nome" class="inputUser" required>       
+        <label for="nome" class="labelinput">Nome Completo:</label>
+    </div>
+    <br>
+    <div class="inputbox">
+        <input type="text" name="email"  class="inputUser" required>
+        <label for="email" class="labelinput">Email:</label><br>
+    </div>
+    <div class="inputbox">
+    <input type="text" name="Telefone" id="Telefone" class="inputUser" required><br><br>
+    <label for="telefone" class="labelinput">Telefone:</label>
+    </div>
+    <p>Sexo:</p>
+    <input type="radio" id="Feminino" name="genero" value="Feminino" required>
+    <label for="Feminino">Feminino</label>
+    <br><br>
+    <input type="radio" id="Masculino" name="genero" value="Masculino" required>
+    <label for="Masculino">Masculino</label>
+    <br><br>
+    <input type="radio" id="Outro" name="genero" value="Outro" required>
+    <label for="outro">Outro</label> 
+    <br><br>
+     <label for="data_nascimento"><b>Data De Nascimento:</b></label>
+     <input type="date" name="data_nascimento" id="data_nascimento"required><br>
+     <br><br>
+    <div class="inputbox">  
+    <input type="text" name="Cidade" id="Cidade" class="inputUser" required>
+    <label for="Cidade" class="labelinput" >Cidade:</label>
+    </div>
+    <br>
+    <div class="inputbox">   
+    <input type="text" name="Estado" id="Estado" class="inputUser" required>
+    <label for="Estado" class="labelinput">Estado:</label>
+    </div>
+    <br>
+    <div class="inputbox">   
+    <input type="text"name="Endereço" id="Endereço" class="inputUser" required>
+    <label for="Endereço" class="labelinput" >Endereço:</label>
+    </div>
+    <br><br>
+    
+    <button class="info" type="submit">Enviar</button>
+        
+   </fieldset>
+   </form>
+  </div>
+</body>
+</html>
+<br>
+<hr>
+<a class="index"href="index.html">Voltar para Página Principal</a>
